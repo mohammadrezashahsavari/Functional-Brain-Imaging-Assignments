@@ -1,6 +1,12 @@
-# Functional Brain Imaging Systems - Course Assignments
+# Functional Brain Imaging Systems - Course Assignments 🧠
 
-Welcome to the repository for the homework assignments of the Master's level course, "Functional Brain Imaging Systems," offered by the Department of Biomedical Engineering at K. N. Toosi University of Technology (KNTU).
+This repository contains the homework assignments for the Master's level course, **Functional Brain Imaging Systems**.
+
+---
+
+- **Instructor:** Dr. Ali Khadem
+- **University:** K. N. Toosi University of Technology (KNTU)
+- **Department:** Biomedical Engineering Group, Faculty of Electrical Engineering
 
 These assignments were designed to provide students with hands-on experience in processing and analyzing electroencephalography (EEG) data using Python. They were developed by Mohammadreza Shahsavari during his role as a Teaching Assistant for the course.
 
@@ -8,32 +14,35 @@ These assignments were designed to provide students with hands-on experience in 
 
 ##  Assignments Overview
 
-The repository contains three major assignments that build upon each other, guiding students from basic preprocessing to advanced group-level analysis.
+The repository contains three major assignments that build upon each other, guiding students from fundamental preprocessing to advanced data analysis techniques.
 
-### **Assignment 3: EEG Preprocessing and Visualization**
-* **Objective:** To introduce the fundamental pipeline for cleaning and preparing EEG data.
+### **Assignment 3: EEG Preprocessing and ERP Analysis**
+* **Objective:** To introduce the fundamental pipeline for cleaning, preparing, and analyzing EEG data to find event-related responses.
 * **Tasks:**
-    * Working with EEG data from a goalkeeper participating in a penalty shootout.
+    * Working with EEG data from a participant trying to predict the actions of others (data collected at [MVP Lab](https://mvaziri.github.io/Homepage/mvpLab.html) and used with permission).
     * Performing essential preprocessing steps including filtering, epoching, and baseline correction.
     * Identifying and interpolating bad channels to handle artifacts.
+    * Calculating and plotting Event-Related Potentials (ERPs) for different experimental conditions.
     * Visualizing brain activity by creating animated topomaps of scalp voltage.
 * **Key Libraries:** MNE-Python, NumPy, Matplotlib.
 
-### **Assignment 5: Event-Related Potential (ERP) Analysis**
-* **Objective:** To analyze ERPs, a critical tool for cognitive neuroscience research.
+### **Assignment 5: Machine Learning for Parkinson's Disease Classification**
+* **Objective:** To apply machine learning techniques to classify participants as Parkinson's Disease (PD) patients or Healthy Controls (HC) based on their resting-state EEG data.
 * **Tasks:**
-    * Analyzing EEG data from a visual oddball paradigm to isolate specific cognitive responses.
-    * Calculating and plotting the P300 component, a well-known ERP associated with stimulus evaluation.
-    * Conducting statistical t-tests to identify electrodes showing a significant P300 effect.
-* **Key Libraries:** MNE-Python, SciPy (for statistics), Matplotlib.
+    * Extracting Power Spectral Density (PSD) features from different frequency bands of the EEG signals.
+    * Training and evaluating various machine learning classifiers, including SVM, K-Nearest Neighbors, and Random Forest.
+    * Implementing a cross-validation strategy to ensure robust model evaluation.
+    * Reporting standard performance metrics such as Accuracy, Precision, Recall, and F1-score.
+* **Key Libraries:** MNE-Python, NumPy, Scikit-learn, Matplotlib.
 
-### **Final Project: Group-Level ERP Investigation**
-* **Objective:** To apply and extend previously learned skills to a complete group-level research question.
+### **Final Project: Multivariate Pattern Analysis (MVPA)**
+* **Objective:** To investigate the spatiotemporal dynamics of the brain during an action prediction task using advanced decoding methods.
 * **Tasks:**
-    * Performing a comprehensive ERP analysis on a dataset with multiple subjects.
-    * Investigating the P300 component's response to target vs. non-target stimuli across a group.
-    * Implementing robust preprocessing and artifact rejection pipelines for multiple recordings.
-    * Generating grand-average ERP plots and visualizations to report group-level findings.
+    * Applying a time-resolved decoding approach (MVPA) to distinguish between experimental conditions ('Left Button Pressed' vs. 'Right Button Pressed') from EEG data.
+    * Training a classifier (e.g., SVM) at each individual time point of the EEG epochs.
+    * Plotting the time course of decoding accuracy to identify when the brain discriminates between the two conditions.
+    * Performing cluster-based permutation tests to find significant spatiotemporal patterns of brain activity.
+* **Key Libraries:** MNE-Python, Scikit-learn, NumPy, Matplotlib.
 
 ---
 
@@ -51,4 +60,4 @@ The repository is organized into directories for each assignment. Inside each di
 To run the code in this repository, you will need a Python environment with the following key libraries installed:
 
 ```bash
-pip install mne numpy scipy pandas matplotlib
+pip install mne numpy scipy pandas matplotlib scikit-learn
