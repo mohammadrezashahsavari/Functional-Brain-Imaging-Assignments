@@ -1,4 +1,4 @@
-# Functional Brain Imaging Systems - Course Assignments 🧠
+# Functional Brain Imaging Systems - Course Assignments
 
 This repository contains the homework assignments for the Master's level course, **Functional Brain Imaging Systems**.
 
